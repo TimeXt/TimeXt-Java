@@ -58,12 +58,12 @@ public class Interval {
     }
 
     public Interval Plus(Interval interval) {
-        this.value = (this.InPicoSeconds() + interval.InPicoSeconds()) * this.unit.conversion / Unit.PicoSecond.conversion;
+        this.value = ((this.InPicoSeconds() + interval.InPicoSeconds()) / this.unit.conversion) * Unit.PicoSecond.conversion;
         return this;
     }
 
     public Interval Minus(Interval interval) {
-        this.value = (this.InPicoSeconds() - interval.InPicoSeconds()) * this.unit.conversion / Unit.PicoSecond.conversion;
+        this.value = ((this.InPicoSeconds() - interval.InPicoSeconds()) / this.unit.conversion) * Unit.PicoSecond.conversion;
         return this;
     }
 
@@ -95,7 +95,7 @@ public class Interval {
     }
 
     public boolean Contains(Interval interval) {
-        return this.InMilliSeconds() >= interval.InMilliSeconds();
+        return this.InPicoSeconds() >= interval.InPicoSeconds();
     }
 
     public boolean Equals(Interval interval) {
@@ -106,6 +106,6 @@ public class Interval {
     }
 
     public int HashCode() {
-        return (int) this.InMilliSeconds();
+        return (int) this.InPicoSeconds();
     }
 }
