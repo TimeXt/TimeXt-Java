@@ -1,0 +1,19 @@
+buildscript {
+    ext.gradle_version = '3.2.1'
+    ext.junit_version = '4.12'
+
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
