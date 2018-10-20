@@ -21,15 +21,15 @@ int dayInMillis = 24 * 60 * 60 * 1000;                                  // Repre
 ### Basics
 
 ```java
-Interval oneWeek = NumberExtensions.toWeeks(1);                         // Type is Interval<Week>
-Interval threeDays = NumberExtensions.toDays(3);                        // Type is Interval<Day>
-Interval elevenHours = NumberExtensions.toHours(11);                    // Type is Interval<Hour>
-Interval sixMinutes = NumberExtensions.toMinutes(6);                    // Type is Interval<Minute>
-Interval fiftySeconds = NumberExtensions.toSeconds(50);                 // Type is Interval<Second>
-Interval hundredMilliSeconds = NumberExtensions.toMilliSeconds(100);    // Type is Interval<MilliSecond>
-Interval fiveMicroSeconds = NumberExtensions.toMicroSeconds(5);         // Type is Interval<MicroSecond>
-Interval oneNanoSecond = NumberExtensions.toNanoSeconds(1);             // Type is Interval<NanoSecond>
-Interval onePicoSecond = NumberExtensions.toPicoSeconds(1);             // Type is Interval<PicoSecond>
+Interval oneWeek = NumberExtensions.toWeeks(1);
+Interval threeDays = NumberExtensions.toDays(3);
+Interval elevenHours = NumberExtensions.toHours(11);
+Interval sixMinutes = NumberExtensions.toMinutes(6);
+Interval fiftySeconds = NumberExtensions.toSeconds(50);
+Interval hundredMilliSeconds = NumberExtensions.toMilliSeconds(100);
+Interval fiveMicroSeconds = NumberExtensions.toMicroSeconds(5);
+Interval oneNanoSecond = NumberExtensions.toNanoSeconds(1);
+Interval onePicoSecond = NumberExtensions.toPicoSeconds(1);
 
 double oneDayInMillis = NumberExtensions.toDays(1).InMilliSeconds();    // Converts one day into milliseconds
 double twoWeeksInHours = NumberExtensions.toWeeks(2).InHours();         // Converts two weeks into hours
