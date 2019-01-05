@@ -5,8 +5,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 <a target="_blank" href="https://www.paypal.me/GuepardoApps" title="Donate using PayPal"><img src="https://img.shields.io/badge/paypal-donate-blue.svg" /></a>
 
-[![Build](https://img.shields.io/badge/build-success-green.svg)](https://github.com/TimeXt/TimeXt-Java/blob/develop/releases/lib-2018-10-20-1.aar)
-[![Version](https://img.shields.io/badge/version-v0.1.0.181020-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/develop/releases/)
+[![Build](https://img.shields.io/badge/build-success-green.svg)](releases/lib-2018-10-20-1.aar)
+[![Version](https://img.shields.io/badge/version-v0.1.0.181020-blue.svg)](releases/lib-2018-10-20-1.aar)
 
 First of all many thanks to [Kizitonwose](https://github.com/kizitonwose/Time) for the original idea and already awesome library!
 
@@ -78,7 +78,7 @@ HandlerExtensions.PostDelayed(handler, runnable, new Interval(2, Unit.Minute));
 
 ## License
 
-TimeXt-Java is distributed under the MIT license. [See LICENSE](https://github.com/TimeXt/TimeXt-Java/blob/develop/LICENSE.md) for details.
+TimeXt-Java is distributed under the MIT license. [See LICENSE](LICENSE.md) for details.
 
 ## Additional
 
