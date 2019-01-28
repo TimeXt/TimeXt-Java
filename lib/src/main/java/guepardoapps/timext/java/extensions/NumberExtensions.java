@@ -4,6 +4,10 @@ import guepardoapps.timext.java.enums.Unit;
 import guepardoapps.timext.java.Interval;
 
 public class NumberExtensions {
+    public static Interval toYears(double value) {
+        return new Interval(value, Unit.Year);
+    }
+
     public static Interval toWeeks(double value) {
         return new Interval(value, Unit.Week);
     }
