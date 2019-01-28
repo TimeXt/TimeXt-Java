@@ -1,6 +1,7 @@
 package guepardoapps.timext.java.enums;
 
 public enum Unit {
+    Year(365 * 24.0 * 60.0 * 60.0),
     Week(7 * 24.0 * 60.0 * 60.0),
     Day(24.0 * 60.0 * 60.0),
     Hour(60.0 * 60.0),

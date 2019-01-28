@@ -21,6 +21,10 @@ public class Interval {
         this.unit = unit;
     }
 
+    public double InYears() {
+        return this.value * this.unit.conversion / Unit.Year.conversion;
+    }
+
     public double InWeeks() {
         return this.value * this.unit.conversion / Unit.Week.conversion;
     }
