@@ -1,4 +1,4 @@
-# TimeXt-Java - master branch
+# TimeXt-Java
 
 [![Platform](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-14+-blue.svg)](https://android-arsenal.com/api?level=14)
