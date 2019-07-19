@@ -3,8 +3,9 @@
 [![Platform](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-26+-blue.svg)](https://android-arsenal.com/api?level=26)
 
-[![Version](https://img.shields.io/badge/version-0.3.0-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/0.3.0)
-[![Build](https://img.shields.io/badge/buildJava-success-green.svg)](releases/lib-2019-05-02-1.jar)
+[![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/0.4.0)
+[![Build](https://img.shields.io/badge/buildJava-success-green.svg)](releases/lib-2019-07-19-1.jar)
+[![Build](https://img.shields.io/badge/buildAndroid-success-green.svg)](releases/lib-android-2019-07-19-2.aar)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/GuepardoApps)
@@ -15,7 +16,7 @@ First of all many thanks to [Kizitonwose](https://github.com/kizitonwose/Time) f
 This library shall help to reduce code like
 
 ```java
-int dayInMillis = 24 * 60 * 60 * 1000;		// Represent a day in milliSeconds
+int dayInMillis = 24 * 60 * 60 * 1000;		// Represent a day in millis
 ```
 
 ## Important
@@ -27,24 +28,24 @@ Better use the [Kotlin version](https://github.com/TimeXt/TimeXt-Kotlin/) of thi
 ### Basics
 
 ```java
-Interval threeYears = NumberExtensions.toYears(3);
-Interval oneWeek = NumberExtensions.toWeeks(1);
-Interval threeDays = NumberExtensions.toDays(3);
-Interval elevenHours = NumberExtensions.toHours(11);
-Interval sixMinutes = NumberExtensions.toMinutes(6);
-Interval fiftySeconds = NumberExtensions.toSeconds(50);
-Interval hundredMilliSeconds = NumberExtensions.toMilliSeconds(100);
-Interval fiveMicroSeconds = NumberExtensions.toMicroSeconds(5);
-Interval oneNanoSecond = NumberExtensions.toNanoSeconds(1);
-Interval onePicoSecond = NumberExtensions.toPicoSeconds(1);
+TimeXt threeYears = DoubleXt.toYears(3.0);
+TimeXt oneWeek = IntXt.toWeeks(1);
+TimeXt threeDays = LongXt.toDays(3L);
+TimeXt elevenHours = DoubleXt.toHours(11.0);
+TimeXt sixMinutes = IntXt.toMinutes(6);
+TimeXt fiftySeconds = LongXt.toSeconds(50L);
+TimeXt hundredMillis = DoubleXt.toMillis(100.0);
+TimeXt fiveMicros = IntXt.toMicros(5);
+TimeXt oneNano = LongXt.toNanos(1L);
+TimeXt onePico = DoubleXt.toPicos(1.0);
 
-double oneDayInMillis = NumberExtensions.toDays(1).InMilliSeconds();    // Converts one day into milliseconds
-double twoWeeksInHours = NumberExtensions.toWeeks(2).InHours();			// Converts two weeks into hours
+double oneDayInMillis = IntXt.toDays(1).InMillis();    		// Converts one day into millis
+double twoWeeksInHours = LongXt.toWeeks(2L).InHours();		// Converts two weeks into hours
 
-Interval duration = NumberExtensions.toDays(1).Plus(NumberExtensions.toHours(6));
-Interval difference = NumberExtensions.toMinutes(34).Minus(NumberExtensions.toSeconds(420));
-Interval multipliedDuration = new Interval(4, Unit.Week).Times(1.5);
-Interval dividedDuration = new Interval(750, Unit.PicoSecond).Div(2.0);
+TimeXt duration = DoubleXt.toDays(1.0).Plus(IntXt.toHours(6));
+TimeXt difference = LongXt.toMinutes(34L).Minus(DoubleXt.toSeconds(420.0));
+TimeXt multipliedDuration = new TimeXt(4, TimeXtUnit.Week).Times(1.5);
+TimeXt dividedDuration = new TimeXt(750, TimeXtUnit.Picos).Div(2.0);
 
 ```
 
@@ -52,23 +53,26 @@ Interval dividedDuration = new Interval(750, Unit.PicoSecond).Div(2.0);
 
 ```java
 // Calendar
-Calendar inOneHour = CalendarExtensions.Add(Calendar.getInstance(), new Interval(1, Unit.Hour));
-Calendar threeDaysAgo = CalendarExtensions.Minus(Calendar.getInstance(), new Interval(3, Unit.Day));
+Calendar inOneHour = CalendarXt.Add(Calendar.getInstance(), new TimeXt(1, TimeXtUnit.Hour));
+Calendar threeDaysAgo = CalendarXt.Minus(Calendar.getInstance(), new TimeXt(3, TimeXtUnit.Day));
+TimeXt calendarDifference = CalendarXt.Minus(Calendar calendar1, Calendar calendar2);
 
 // Sql Date
 java.sql.Date sqlDate = new java.sql.Date();
-sqlDate = DateExtensions.Add(sqlDate, new Interval(30, Unit.Second));
-sqlDate = DateExtensions.Minus(sqlDate, new Interval(500, Unit.MilliSecond));
+sqlDate = DateXt.Add(sqlDate, new TimeXt(30, TimeXtUnit.Second));
+sqlDate = DateXt.Minus(sqlDate, new TimeXt(500, TimeXtUnit.Millis));
+TimeXt dateDifference = DateXt.Minus(java.sql.Date date1, java.sql.Date date2);
 
 // Util Date
 java.util.Date utilDate = new java.util.Date();
-utilDate = DateExtensions.Add(utilDate, new Interval(30, Unit.Second));
-utilDate = DateExtensions.Minus(utilDate, new Interval(500, Unit.MilliSecond));
+utilDate = DateXt.Add(utilDate, new TimeXt(30, TimeXtUnit.Second));
+utilDate = DateXt.Minus(utilDate, new TimeXt(500, TimeXtUnit.Millis));
+TimeXt dateDifference = DateXt.Minus(java.util.Date date1, java.util.Date date2);
 
 // Timer
 Timer timer = new Timer();
 TimerTask timerTask = ...;
-TimerExtensions.Schedule(timer, timerTask, new Interval(10, Unit.Second));
+TimerXt.Schedule(timer, timerTask, new TimeXt(10, TimeXtUnit.Second));
 ```
 
 The library also includes extensions for Android's Handler class, this is only available if you compile the "lib-android" module.
@@ -76,16 +80,19 @@ The library also includes extensions for Android's Handler class, this is only a
 ```java
 Handler handler = new Handler()
 Runnable runnable = ...;
-HandlerExtensions.PostDelayed(handler, runnable, new Interval(2, Unit.Minute));
+HandlerXt.PostDelayed(handler, runnable, new TimeXt(2, TimeXtUnit.Minute));
 ```
 
 Since version 0.3.0 TimeXt has new extensions for the long type to display this number value in a human readable string format.
+In version 0.4.0 support for Integer and Double was added as well as the new method formatWeeks.
 
 ```java
-val readableStringFromMilliseconds = LongExtensions.formatMilliseconds(34325055574) // 56 weeks, 5 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds
-val readableStringFromSeconds = LongExtensions.formatSeconds(4350554) 				// 7 weeks, 1 day, 8 hours, 29 minutes, 14 seconds
-val readableStringFromMinutes = LongExtensions.formatMinutes(432555) 				// 42 weeks, 6 days, 9 hours, 15 minutes
-val readableStringFromHours = LongExtensions.formatHours(4574) 						// 27 weeks, 1 day, 14 hours
+val readableStringFromMillis = LongXt.formatMillis(34325055574L) 	// 56 weeks, 5 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds
+val readableStringFromSeconds = LongXt.formatSeconds(4350554L)		// 7 weeks, 1 day, 8 hours, 29 minutes, 14 seconds
+val readableStringFromMinutes = LongXt.formatMinutes(432555L)		// 42 weeks, 6 days, 9 hours, 15 minutes
+val readableStringFromHours = LongXt.formatHours(4574L)				// 27 weeks, 1 day, 14 hours
+val readableStringFromDays = DoubleXt.formatDays(0.75)				// 18 hours
+val readableStringFromWeeks = IntXt.formatWeeks(3)					// 3 weeks
 ```
 
 ## Requirements
@@ -119,3 +126,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Attention
+
+Migrating from version 0.3.0 or lower to 0.4.0 or upper includes breaking changes. 
+Class names where shortened from *Extensions to *Xt and unit enum was moved to another package (same as TimeXt) and renamed to TimeXtUnit. 
+Furthermore all units smaller the unit second got shortened to *s (millis, micros, picos, nanos).
