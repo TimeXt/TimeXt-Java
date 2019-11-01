@@ -3,9 +3,9 @@
 [![Platform](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
 [![API](https://img.shields.io/badge/API-26+-blue.svg)](https://android-arsenal.com/api?level=26)
 
-[![Version](https://img.shields.io/badge/version-0.4.0-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/0.4.0)
-[![Build](https://img.shields.io/badge/buildJava-success-green.svg)](releases/lib-2019-07-19-1.jar)
-[![Build](https://img.shields.io/badge/buildAndroid-success-green.svg)](releases/lib-android-2019-07-19-2.aar)
+[![Version](https://img.shields.io/badge/version-0.5.0-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/0.5.0)
+[![Build](https://img.shields.io/badge/buildJava-success-green.svg)](releases/lib-2019-11-01-1.jar)
+[![Build](https://img.shields.io/badge/buildAndroid-success-green.svg)](releases/lib-android-2019-11-01-1.aar)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/GuepardoApps)
@@ -28,6 +28,8 @@ Better use the [Kotlin version](https://github.com/TimeXt/TimeXt-Kotlin/) of thi
 ### Basics
 
 ```java
+TimeXt fiveCenturies = DoubleXt.toCenturies(5);
+TimeXt tenDecades = DoubleXt.toDecades(10.0);
 TimeXt threeYears = DoubleXt.toYears(3.0);
 TimeXt oneWeek = IntXt.toWeeks(1);
 TimeXt threeDays = LongXt.toDays(3L);
@@ -85,6 +87,7 @@ HandlerXt.PostDelayed(handler, runnable, new TimeXt(2, TimeXtUnit.Minute));
 
 Since version 0.3.0 TimeXt has new extensions for the long type to display this number value in a human readable string format.
 In version 0.4.0 support for Integer and Double was added as well as the new method formatWeeks.
+Since version 0.5.0 TimeXt has values for decades and centuries and  more precise conversions.
 
 ```java
 val readableStringFromMillis = LongXt.formatMillis(34325055574L) 	// 56 weeks, 5 days, 6 hours, 44 minutes, 15 seconds, 574 milliseconds
@@ -98,6 +101,12 @@ val readableStringFromWeeks = IntXt.formatWeeks(3)					// 3 weeks
 ## Requirements
 
 - Use at least JVM 1.8
+
+## Contributors
+
+| [<img alt="GuepardoApps" src="https://avatars0.githubusercontent.com/u/21952813?v=4&s=117" width="117"/>](https://github.com/GuepardoApps) |
+| :---------------------------------------------------------------------------------------------------------------------------------------: |
+| [GuepardoApps](https://github.com/GuepardoApps) |
 
 ## License
 
@@ -129,6 +138,6 @@ SOFTWARE.
 
 ## Attention
 
-Migrating from version 0.3.0 or lower to 0.4.0 or upper includes breaking changes. 
+Migrating from version 0.3.0 or lower to 0.4.0 or upper includes breaking changes.
 Class names where shortened from *Extensions to *Xt and unit enum was moved to another package (same as TimeXt) and renamed to TimeXtUnit. 
 Furthermore all units smaller the unit second got shortened to *s (millis, micros, picos, nanos).

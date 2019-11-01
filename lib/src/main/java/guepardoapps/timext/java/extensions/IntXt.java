@@ -24,18 +24,26 @@ public class IntXt {
     }
 
     public static String formatHours(int hours) {
-        ArrayList<String> arrayList = format(hours, 60 * 60 * 1000.0);
+        ArrayList<String> arrayList = format(hours, 3600 * 1000.0);
         return arrayList.size() > 0 ? String.join(", ", arrayList) : formatMinutes(60 * hours);
     }
 
     public static String formatDays(int days) {
-        ArrayList<String> arrayList = format(days, 24 * 60 * 60 * 1000.0);
+        ArrayList<String> arrayList = format(days, 86400 * 1000.0);
         return arrayList.size() > 0 ? String.join(", ", arrayList) : formatHours(24 * days);
     }
 
     public static String formatWeeks(int weeks) {
-        ArrayList<String> arrayList = format(weeks, 7 * 24 * 60 * 60 * 1000.0);
+        ArrayList<String> arrayList = format(weeks, 604800 * 1000.0);
         return arrayList.size() > 0 ? String.join(", ", arrayList) : formatDays(7 * weeks);
+    }
+
+    public static TimeXt toCenturies(int value) {
+        return new TimeXt(value, TimeXtUnit.Century);
+    }
+
+    public static TimeXt toDecades(int value) {
+        return new TimeXt(value, TimeXtUnit.Decade);
     }
 
     public static TimeXt toYears(int value) {

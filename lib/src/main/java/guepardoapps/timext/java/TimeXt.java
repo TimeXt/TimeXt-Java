@@ -19,6 +19,10 @@ public class TimeXt {
         this.unit = unit;
     }
 
+    public double InCenturies() { return this.value * this.unit.conversion / TimeXtUnit.Century.conversion; }
+
+    public double InDecades() { return this.value * this.unit.conversion / TimeXtUnit.Decade.conversion; }
+
     public double InYears() { return this.value * this.unit.conversion / TimeXtUnit.Year.conversion; }
 
     public double InWeeks() { return this.value * this.unit.conversion / TimeXtUnit.Week.conversion; }
