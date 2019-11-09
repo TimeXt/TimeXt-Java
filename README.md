@@ -1,3 +1,7 @@
+<h1 align="center">
+	<img width="90" src="logo.png" alt="timext">
+</h1>
+
 # TimeXt-Java
 
 [![Platform](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
