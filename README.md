@@ -2,18 +2,22 @@
 	<img width="90" src="logo.png" alt="timext">
 </h1>
 
-# TimeXt-Java
+<p align="center"><h1 style="text-align: center;">TimeXt-Java</h1></p>
 
-[![Platform](https://img.shields.io/badge/platform-Android-blue.svg)](https://www.android.com)
-[![API](https://img.shields.io/badge/API-26+-blue.svg)](https://android-arsenal.com/api?level=26)
+<p align="center">
+  <a href="https://www.android.com"><img src="https://img.shields.io/badge/platform-Android-blue.svg"/></a>
+  <a href="https://android-arsenal.com/api?level=26"><img src="https://img.shields.io/badge/API-26+-blue.svg"/></a>
+  <a href="https://github.com/TimeXt/TimeXt-Java/tree/0.5.0"><img src="https://img.shields.io/badge/version-0.5.0-blue.svg"/></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/></a>
+  <a href="https://github.com/TimeXt/timext-Dart/"><img src="https://img.shields.io/github/stars/TimeXt/timext-Dart.svg"/></a>
+</p>
 
-[![Version](https://img.shields.io/badge/version-0.5.0-blue.svg)](https://github.com/TimeXt/TimeXt-Java/tree/0.5.0)
-[![Build](https://img.shields.io/badge/buildJava-success-green.svg)](releases/lib-2019-11-01-1.jar)
-[![Build](https://img.shields.io/badge/buildAndroid-success-green.svg)](releases/lib-android-2019-11-01-1.aar)
+<p align="center"><h6 style="text-align: center;">Support me</h6></p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Paypal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.me/GuepardoApps)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
+<p align="center">
+  <a href="https://www.paypal.me/GuepardoApps"><img src="https://img.shields.io/badge/paypal-support-blue.svg"/></a>
+</p>
 
 First of all many thanks to [Kizitonwose](https://github.com/kizitonwose/Time) for the original idea and already awesome library!
 
