@@ -10,7 +10,7 @@
   <a href="https://github.com/TimeXt/TimeXt-Java/tree/0.5.0"><img src="https://img.shields.io/badge/version-0.5.0-blue.svg"/></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg"/></a>
-  <a href="https://github.com/TimeXt/timext-Dart/"><img src="https://img.shields.io/github/stars/TimeXt/timext-Dart.svg"/></a>
+  <a href="https://github.com/TimeXt/Timext-Java/"><img src="https://img.shields.io/github/stars/TimeXt/Timext-Java.svg"/></a>
 </p>
 
 <p align="center"><h6 style="text-align: center;">Support me</h6></p>
